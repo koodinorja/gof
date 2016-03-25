@@ -7,7 +7,7 @@ class GameOfLifeController {
     'ngInject';
     this.interval = $interval;
     this.game = new Game(40, 40);
-    this.intervalTime = 500;
+    this.intervalTime = 350;
     this.gameRunning = false;
     this.playing = {};
 
@@ -35,6 +35,8 @@ class GameOfLifeController {
    */
   toggleCell(cell) {
     cell.alive = !cell.alive;
+
+    // this.game.neighbours(cell);
   }
 
 }

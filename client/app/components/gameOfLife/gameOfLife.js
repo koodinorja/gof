@@ -1,9 +1,7 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import gameOfLifeComponent from './gameOfLife.component';
-import template from './gameOfLife.html'
 import css from './gameOfLife.css';
-
 
 let gameOfLifeModule = angular.module('gameOfLife', [
   uiRouter

@@ -1,11 +1,12 @@
-<navbar></navbar>
-<div>
-  <h1>Peli</h1>
-  <button ng-click="vm.toggleGame()">Start</button>
-  <div class="game-container">
+<div class="container-fluid">
+  <h1>Game of life</h1>
+  <button class="md-raised" ng-click="vm.toggleGame()">{{ vm.gameRunning ? 'Stop' : 'Start'}}</button>
+  <div class="game-container row">
     <div ng-repeat="cell in vm.game.cells" class="item" ng-click="vm.toggleCell(cell)">
-      <div ng-class="{'alive': cell.alive, 'dead': !cell.alive}">.</div>
+      <div class="cell" ng-class="{'alive': cell.alive, 'dead': !cell.alive}"></div>
     </div>
   </div>
-  <h3 ng-bind="vm.game.generation"></h3>
+  <div>
+    <h2>Generation: {{ vm.game.generation }}</h4>
+  </div>
 </div>

@@ -16,6 +16,7 @@ class Game {
     this.generation = 0;
     this.cells = this.createCells(0, 0, []);
 
+
   }
 
   /**
@@ -30,10 +31,14 @@ class Game {
   }
 
   nextGeneration() {
-    this.generation++;
-    console.log(this);
     _.map(this.cells, (cell) => {
-      cell.checkStatus(this.cells);
+      cell.checkNextGenerationStatus();
+    });
+
+    this.generation++;
+
+    _.map(this.cells, (cell) => {
+      cell.setNextGenerationStatus();
     });
   }
 
@@ -46,6 +51,9 @@ class Game {
       }
 
       if (y == this.columns) {
+        _.map(cells, (cell) => {
+          cell.findNeighbours(cells);
+        });
         return cells;
       }
 
@@ -59,6 +67,10 @@ class Game {
     }
 
     return cells;
+  }
+
+  neighbours(cell) {
+    cell.wat();
   }
 }
 

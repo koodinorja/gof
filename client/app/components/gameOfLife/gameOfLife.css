@@ -1,7 +1,7 @@
 .game-container {
   padding: 0;
   margin: 0;
-  width: 400px;
+  width: 480px;
   list-style: none;
 
   display: -webkit-box;
@@ -16,13 +16,20 @@
 .item {
   width: 10px;
   height: 10px;
+  border: 1px solid;
 
 }
 
 .alive {
   background-color: green;
+  color: green;
 }
 
 .dead {
   background-color: white;
+  color: white;
+}
+
+.cell:before {
+  content: 'a';
 }
