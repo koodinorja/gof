@@ -1,7 +1,7 @@
 {
-  "name": "ng6-starter",
+  "name": "game of life",
   "version": "0.0.1",
-  "description": "Starter for Angular + ES6 + (Webpack or JSPM)",
+  "description": "Game of life with angular. Using NG6-starter as seed",
   "main": "index.js",
   "dependencies": {
     "angular": "^1.5.0",
@@ -59,8 +59,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/angularclass/NG6-starter.git"
+    "url": "https://github.com/koodinorja/gof.git"
   },
-  "author": "AngularClass",
+  "author": "koodinorja",
   "license": "Apache-2.0"
 }
