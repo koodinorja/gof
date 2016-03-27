@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <h1>Game of life</h1>
   <button class="md-raised" ng-click="vm.toggleGame()">{{ vm.gameRunning ? 'Stop' : 'Start'}}</button>
-  Speed: <input type="button" name="name" ng-model="vm.intervalTime">
+  Speed: <input type="text" name="name" ng-model="vm.intervalTime">
   <div class="game-container row">
     <div ng-repeat="cell in vm.game.cells" class="item" ng-click="vm.toggleCell(cell)">
       <div class="cell" ng-class="{'alive': cell.alive, 'dead': !cell.alive}"></div>
