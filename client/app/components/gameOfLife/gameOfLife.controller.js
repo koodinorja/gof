@@ -33,7 +33,8 @@ class GameOfLifeController {
    * Toggles cell as alive/dead
    * @param {object} cell - a single cell
    */
-  toggleCell(cell) {
+  toggleCell(cell, cellColor) {
+    cell.cellColor = cellColor;
     cell.alive = !cell.alive;
 
     // this.game.neighbours(cell);

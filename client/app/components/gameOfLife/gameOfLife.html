@@ -3,11 +3,19 @@
   <button class="md-raised" ng-click="vm.toggleGame()">{{ vm.gameRunning ? 'Stop' : 'Start'}}</button>
   Speed: <input type="text" name="name" ng-model="vm.intervalTime">
   <div class="game-container row">
-    <div ng-repeat="cell in vm.game.cells" class="item" ng-click="vm.toggleCell(cell)">
+    <div ng-repeat="cell in vm.game.cells" class="item" ng-click="vm.toggleCell(cell, cellColor)">
       <div class="cell" ng-class="{'alive': cell.alive, 'dead': !cell.alive}"></div>
     </div>
   </div>
   <div>
+    <label for="greenCell">
+      Green
+      <input type="checkbox" name="greenCell" value="green" ng-model="cellColor">
+    </label>
+    <label for="redCell">
+      Red
+      <input type="checkbox" name="redCell" value="red" ng-model="cellColor">
+    </label>
     <h2>Generation: {{ vm.game.generation }}</h4>
   </div>
 </div>

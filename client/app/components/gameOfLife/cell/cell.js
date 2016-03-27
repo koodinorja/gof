@@ -9,6 +9,7 @@ class Cell {
     this.aliveNextGeneration = false;
     this.neighbours = [];
     this.Position = Position;
+    this.cellcolor = green;
 
   }
 
